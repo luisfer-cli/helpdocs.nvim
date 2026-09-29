@@ -1,0 +1,26 @@
+helpdocs.nvim.txt	DevDocs converted to native Vim help
+
+==============================================================================
+Introduction                                                *helpdocs.nvim*
+
+helpdocs.nvim installs DevDocs docsets as Vim help files. It does not provide a
+viewer: use :help.
+
+Commands                                                   *helpdocs-commands*
+
+:DocsInstall {doc}
+	Download a DevDocs bundle, convert it to Vimdoc, generate helptags and add it
+to 'runtimepath'. Example: >
+	:DocsInstall react
+<
+
+:DocsRemove {doc}
+	Remove an installed docset.
+
+:DocsUpdate [doc]
+	Reinstall one docset, or all installed docsets when {doc} is omitted.
+
+:DocsList
+	List installed docsets.
+
+vim:tw=78:ts=8:ft=help:norl:
