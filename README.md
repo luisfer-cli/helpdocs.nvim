@@ -7,6 +7,7 @@ No custom viewer: after installing, use `:help`.
 :DocsInstall react
 :h react
 :h react-useEffect
+:DocsSearch useEffect
 ```
 
 ## Requirements
@@ -14,6 +15,7 @@ No custom viewer: after installing, use `:help`.
 - Neovim 0.10+
 - `curl`
 - `tar`
+- `rg` optional; falls back to `grep` for `:DocsSearch`
 - Network access to `https://devdocs.io/docs.json` and `https://downloads.devdocs.io/`
 
 ## Install
@@ -21,7 +23,7 @@ No custom viewer: after installing, use `:help`.
 Use your plugin manager, for example lazy.nvim:
 
 ```lua
-{ 'yourname/helpdocs.nvim' }
+{ 'luisfer-cli/helpdocs.nvim' }
 ```
 
 ## Commands
@@ -33,6 +35,7 @@ Use your plugin manager, for example lazy.nvim:
 - `:DocsSearch <text>`: search installed docsets with `rg` or `grep`, then pick a match.
 
 Install completion uses the cached DevDocs manifest after the first install.
+`DocsSearch` searches only installed docsets and opens the selected match.
 
 ## Storage
 
