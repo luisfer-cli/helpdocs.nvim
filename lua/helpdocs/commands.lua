@@ -1,5 +1,6 @@
 local installer = require('helpdocs.installer')
 local devdocs = require('helpdocs.devdocs')
+local search = require('helpdocs.search')
 local M = {}
 
 function M.setup()
@@ -16,6 +17,7 @@ function M.setup()
   vim.api.nvim_create_user_command('DocsRemove', function(o) installer.remove(o.args) end, { nargs = 1, complete = installer.installed_complete })
   vim.api.nvim_create_user_command('DocsUpdate', function(o) installer.update(o.args) end, { nargs = '?', complete = installer.installed_complete })
   vim.api.nvim_create_user_command('DocsList', function() installer.list() end, {})
+  vim.api.nvim_create_user_command('DocsSearch', function(o) search.search(o.args) end, { nargs = '*' })
 end
 
 return M

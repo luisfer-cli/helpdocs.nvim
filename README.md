@@ -30,6 +30,7 @@ Use your plugin manager, for example lazy.nvim:
 - `:DocsRemove <doc>`: remove an installed docset.
 - `:DocsUpdate [doc]`: reinstall one docset or all installed docsets.
 - `:DocsList`: list installed docsets.
+- `:DocsSearch <text>`: search installed docsets with `rg` or `grep`, then pick a match.
 
 Install completion uses the cached DevDocs manifest after the first install.
 
